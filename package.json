@@ -1,0 +1,43 @@
+{
+  "name": "sbcapp",
+  "version": "1.0.0",
+  "description": "A web-based workout tracker for the bucco Barbell Club, enabling users to log exercises, track progress, manage workout routines, and download workouts in CSV or PDF formats.",
+  "main": "server.js",
+  "scripts": {
+    "test": "Jest",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "sbc-tracker"
+  },
+  "keywords": [
+    "workout",
+    "tracker",
+    "fitness",
+    "app",
+    "exercise",
+    "log",
+    "health",
+    "gym",
+    "software",
+    "personal",
+    "training",
+    "workout",
+    "routines",
+    "Sabucco",
+    "Barbell",
+    "Club",
+    "fitness",
+    "tracking",
+    "weightlifting",
+    "bodybuilding",
+    "strength",
+    "traing",
+    "Crossfit",
+    "functinal",
+    "fitness"
+  ],
+  "author": "Mr_BlueFish",
+  "license": "MIT"
+}
