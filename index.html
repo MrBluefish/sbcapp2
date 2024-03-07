@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Tracker</title>
+    <link rel="stylesheet" href="sbcapp.css">
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to the Sabucco Barbell Club</h1>
+            <h1>Workout Tracker</h1>
+            <a href="#services" class="cta-button">Explore Now</a>
+        </div>
+    </section>
+    <section class="main">
+    <div id="app">
+        <h2>Add New Workout</h2>
+        <form id="workoutForm">
+            <div class="input-group">
+                <label for="muscleGroupInput">Muscle Group:</label>
+                <input type="text" id="muscleGroupInput" name="muscleGroup" placeholder="Targeted Muscle Group">
+                <span id="muscleGroupText"></span> 
+            </div>            
+            <div id="exercisesContainer">
+                <button type="button" id="addExerciseBtn">Add Exercise</button>
+            </div>
+            <div class="finish" id="finishButton">
+            <button type="button"id="submitWorkout">Submit Workout</button>
+            <button type="button" id="resetWorkout">Reset Workout</button>
+            </div>
+            <!-- Placeholder for the confirmation popup -->
+            <div id="confirmationPopup" style="display: none;">
+                <div id="popupContent">
+                <p id="popupMessage">Level Up! Great job!</p>
+                <button id="closePopup">OK</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    </section>
+    <script src="sbcapp.js"></script>
+</body>
+</html>
