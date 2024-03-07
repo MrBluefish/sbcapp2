@@ -15,6 +15,7 @@
 
 .logo {
     max-width: 50%; /* Consider if you need to adjust this for smaller screens */
+    height: auto;
 }
 
 .hero-content {
