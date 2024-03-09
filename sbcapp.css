@@ -5,7 +5,7 @@
     background-repeat: no-repeat;
     height:fit-content;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start; /* Adjusted for proper alignment */
     justify-content: flex-start; /* Adjusted for top alignment */
     color: #ffffff;
@@ -54,8 +54,9 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .hero-content, .hero h1, .hero p {
+        flex-direction: column;
         padding: 15px;
         font-size: 2em; /* Adjust based on preference */
     }
@@ -63,6 +64,7 @@
 
 @media (max-width: 480px) {
     .hero {
+        flex-direction: column;
         padding-left: 5em; /* Less padding for very small screens */
     }
 
