@@ -1,101 +1,50 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
 .hero {
-    background: radial-gradient(circle at 5.9% 54.2%, #2e5e6c 0%, #083f4e 15.9%, #08090a 15.9%, #ff6f3b 24.4%, #ff6f3c 24.5%, #cf5c15 66%);    height: 50%;
+    background: radial-gradient(circle at 12% 50%, #2e5e6c 0%, #083f4e 25.9%, #08090a 25.9%, #ff6f3b 24.4%, #ff6f3c 24.5%, #cf5c15 66%);
     color: #ffffff;
-    padding-top: 1em;
-    padding-bottom: 1em; /* Add padding to the left to ensure content is not too close to the edge */
+    padding: 1em; /* Unified padding */
     margin-bottom: 1.5em;
-    width: 100%; /* Ensure full width */
-    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .logo {
-    display: flex;
-    flex-direction: row;
-    max-width: 17em; /* Consider if you need to adjust this for smaller screens */
+    max-width: 17em; /* Adjusted max-width for responsiveness */
     height: auto;
-    margin: 1em;
+    margin: 1em 0;
 }
 
-.hero-content {
-    display: flex;
-    flex-direction:row;
-    justify-content: space-between;
-    align-items: center;
-    text-align:center;
-
-    padding: 10px; /* Adjusted for a bit more padding */
+.hero-content, .hero-text {
+    text-align: center;
+    padding: 10px;
 }
 
-@media (max-width: 768px) {
-    .hero-content {
-        flex-direction: column;
-    }
-}
-
-.hero-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
 .hero h1, .hero h2 {
-    margin-bottom: 10px;
-    margin-left: 0%;
+    margin: 10px 0; /* Uniform margin */
     text-shadow: #0a0a0a 3.5px 3.5px;
 }
 
 .hero h1 {
-    font-size: 4em; /* Made larger for emphasis */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 4em; /* Large emphasis for desktop */
 }
 
 .hero h2 {
-    font-size: 2em; /* Adjust for clear hierarchy */
-}
-
-/*.cta-button {
-    background-color: #ff6f3c;
-    color: white;
-    padding: 7px 10px; 
-    text-shadow: #313030 1px 1px;
-    border: solid 1px #080808;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-.cta-button:hover {
-    background-color: #080808;
-}*/
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-    .hero-content, .hero h1, .hero p {
-        flex-direction: column;
-        padding: 15px;
-        font-size: 2em; /* Adjust based on preference */
-    }
-}
-
-@media (max-width: 480px) {
-    .hero {
-        flex-direction: column;
-        padding-left: 5em; /* Less padding for very small screens */
-    }
-
-    .hero-content, .hero h1, .hero p, .cta-button {
-        padding: 10px;
-        font-size: 1.5em; /* Further adjustments for mobile */
-    }
-
-    .cta-button {
-        padding: 8px 15px;
-    }
+    font-size: 2em; /* Clear hierarchy for all sizes */
 }
 
 .vertical-nav-bar {
-    width: 200px; /* Adjust width as needed */
-    height: 100%;
-    position:relative;
-    left: 0;
-    top: 0;
+    width: 100%;
+    position: relative;
     overflow-x: hidden;
 }
 
@@ -104,197 +53,84 @@
     padding: 0;
     display: flex;
     flex-direction: column;
-}
-
-.vertical-nav-bar ul li {
-    border-bottom: 1px solid #ddd; /* Border between items */
+    align-items: center;
 }
 
 .vertical-nav-bar ul li a {
-    display: block;
-    color: #000; /* Text color */
-    padding: 16px; /* Spacing around text */
-    text-decoration: none; /* No underline */
+    color: #000;
+    padding: 10px;
+    text-decoration: none;
 }
 
-/* Change background color of links on hover */
 .vertical-nav-bar ul li a:hover {
     background-color: #ccc;
 }
 
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0px;
-    padding: 0;
-    background-color: #ffffff;
+.main, #app {
+    padding: 1em;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    margin: 1em;
+    width: 90%; /* Ensures content doesn't stretch too wide on larger screens */
 }
 
-.main {
-    background-image: url();
-    background-size: 25em;
-    background-position: right;
-    background-repeat: no-repeat;
-    height:fit-content;
-}
-
-
-#app {
-    background-image: url(./Images/SBC\ burst\ lines\ Gold.png);
-    background-size: 25em;
-    background-position: right top;
-    background-repeat: no-repeat;
+.input-group, .finish {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 5%, rgba(0,0,0,0.15) 75%), 
-            radial-gradient(at top center, rgba(117, 116, 116, 0.4) 25%, rgba(0,0,0,0.40) 60%) #989898;
-    margin: auto;
-    width: 90%;
-    border-radius: 15px; /* Adjust the radius for more or less rounded corners */
-    box-shadow: 5px 5px 12px rgba(0,0,0,0.3), /* Outer shadow for depth */
-                inset -5px -6px 10px rgba(255,255,255,0.3), /* Inner lighter shadow for 3D effect */
-                inset 5px 5px 10px rgba(0,0,0,0.5); /* Inner darker shadow for 3D effect */
-    border: 1px solid rgba(0,0,0,0.2); /* Optional: subtle border for definition */
-    padding: 10px;
-}
-
-h2 {
-    color: #ffc93c;
-    text-decoration:solid;
-    text-shadow: 2px 2px #313030;
-    text-align: left;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-}
-
-.input-group {
-    color: #ffc93c;
-    font-weight: 600;   
-    text-shadow:#313030 2px 2px;
-
-}
-.muscleGroupText {
-    margin-left: 10px; /* Adds some space between the input field and the text */
-    color: #08090a; /* Changes the text color */
-}
-
-.input-group label,
-.input-group button {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    width: 9%;
+    margin: 5px 0;
 }
 
-.input-group input,
-.input-group select,
-.input-group button {
-    margin-top: 10px;
-    margin-right: 5px;
+.input-group label, .input-group input, .input-group button, 
+#submitWorkout, #resetWorkout, button {
+    width: 100%;
     padding: 10px;
+    margin-top: 10px;
     border-radius: 5px;
     border: 1px solid #080808;
 }
 
 .input-group input {
     background-color: rgb(192, 192, 187);
-    color:#ffc93c;
-    width:auto;
+    color: #ffc93c;
 }
 
-.input-group label {
+.input-group label, .muscleGroupText {
     color: #ffc93c;
     text-shadow: #313030 2px 2px;
 }
 
-.finish {
-    display: flex;
-    flex-direction: row;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3em; /* Slightly smaller for tablets */
+    }
+
+    .hero h2 {
+        font-size: 1.5em;
+    }
+
+    .hero-content {
+        flex-direction: column;
+    }
+
+    .vertical-nav-bar ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .vertical-nav-bar ul li {
+        display: inline-block; /* Horizontal layout for nav items */
+    }
 }
 
-#submitWorkout {
-    width: auto;
-    max-width: 40%;
-}
+@media (max-width: 480px) {
+    .hero h1, .hero h2, .hero-text {
+        font-size: 1.2em; /* Smaller text for mobile */
+        padding: 5px; /* Reduced padding for tighter layout */
+    }
 
-#resetWorkout:hover {
-    background-color: #ff6f3c;
-    color:#ffc93c;
-    text-shadow: #080808 1px 1px;
-    
-}
-button {
-    cursor: pointer;
-    background-color: #155263;
-    color:#ffc93c;
-    margin-top: 10px;
-    margin-right: 5px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #0a0a0a;
-}
-
-#resetWorkout {
-    width: auto;
-    max-width: 30%;
-    color:#155263;
-    background-color: #ff6f3c;
-    text-shadow: gold 1px 1px;
-}
-
-button:hover {
-    color:gold;
-    background-color: rgb(0, 5, 17);
-}
-
-.table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-.table th,
-.table td {
-    text-align: left;
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
-}
-
-.popup-confirmation {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    display: none; /* Hidden by default, display it when needed */
-}
-
-.popup-confirmation h3 {
-    margin-top: 0;
-}
-
-#confirmationPopup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#popupContent {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
+    .input-group label, .input-group input, .input-group button {
+        font-size: 0.9em; /* Smaller form elements for better fit */
+    }
 }
