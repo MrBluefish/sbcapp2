@@ -11,9 +11,7 @@
         <div class="hero-content">
             <img class="logo" id="sbclogo" alt="sabucco barbell club logo" src="./Images/logo-shield nouveau.png">
             <div class="hero-text">
-            <h2>Welcome to the </h2>
-            <h1>Sabucco Barbell Club</h1>
-            <h2>Workout Tracker</h2>
+            <h1>Workout Tracker</h1>
             </div>
             <nav class="vertical-nav-bar">
                 <ul>
@@ -23,7 +21,6 @@
                     <li><a href="#join">Join the Club</a></li>
                 </ul>
             </nav>
-            </div>
         </div>
     </section>
     <section class="main">
@@ -31,7 +28,7 @@
         <h2>Add New Workout</h2>
         <form id="workoutForm">
             <div class="input-group">
-                <label for="muscleGroupInput">Muscle Group:</label>
+                <label id="muscle-group" for="muscleGroupInput">Muscle Group:</label>
                 <input type="text" id="muscleGroupInput" name="muscleGroup" placeholder="Targeted Muscle Group">
                 <span id="muscleGroupText"></span> 
             </div>            
@@ -39,7 +36,7 @@
                 <button type="button" id="addExerciseBtn">Add Exercise</button>
             </div>
             <div class="finish" id="finishButton">
-            <button type="submit"id="submitWorkout">Submit Workout</button>
+            <button type="submit" id="submitWorkout">Submit Workout</button>
             <button type="reset" id="resetWorkout">Reset Workout</button>
             </div>
             <!-- Placeholder for the confirmation popup -->
